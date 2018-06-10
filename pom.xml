@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>SerenityPhysicalFile</groupId>
+    <artifactId>SerenityPhysicalFile</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <properties>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+    </properties>
+<dependencies>
+    <!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-core -->
+    <dependency>
+        <groupId>net.serenity-bdd</groupId>
+        <artifactId>serenity-core</artifactId>
+        <version>1.9.20</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-model -->
+    <dependency>
+        <groupId>net.serenity-bdd</groupId>
+        <artifactId>serenity-model</artifactId>
+        <version>1.9.20</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-junit -->
+    <dependency>
+        <groupId>net.serenity-bdd</groupId>
+        <artifactId>serenity-junit</artifactId>
+        <version>1.9.20</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-screenplay -->
+    <dependency>
+        <groupId>net.serenity-bdd</groupId>
+        <artifactId>serenity-screenplay</artifactId>
+        <version>1.9.20</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-report-resources -->
+    <dependency>
+        <groupId>net.serenity-bdd</groupId>
+        <artifactId>serenity-report-resources</artifactId>
+        <version>1.9.20</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-rest-assured -->
+    <dependency>
+        <groupId>net.serenity-bdd</groupId>
+        <artifactId>serenity-rest-assured</artifactId>
+        <version>1.9.20</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-spring -->
+    <dependency>
+        <groupId>net.serenity-bdd</groupId>
+        <artifactId>serenity-spring</artifactId>
+        <version>1.9.20</version>
+        <scope>test</scope>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-test-utils -->
+    <dependency>
+        <groupId>net.serenity-bdd</groupId>
+        <artifactId>serenity-test-utils</artifactId>
+        <version>1.9.20</version>
+
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-cucumber -->
+    <dependency>
+        <groupId>net.serenity-bdd</groupId>
+        <artifactId>serenity-cucumber</artifactId>
+        <version>1.9.8</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/net.serenity-bdd/serenity-reports -->
+    <dependency>
+        <groupId>net.serenity-bdd</groupId>
+        <artifactId>serenity-reports</artifactId>
+        <version>1.9.20</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>2.9.5</version>
+    </dependency>
+
+</dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
