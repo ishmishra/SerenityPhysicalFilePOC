@@ -1,15 +1,17 @@
 package stepdefinition;
 
 
-import cucumber.api.PendingException;
+import cucumber.api.DataTable;
+
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.When;
+
 import model.*;
 import net.thucydides.core.annotations.Steps;
 import steps.NachaModelBuilder;
 
 import java.util.List;
+import java.util.Map;
 
 public class PhysicalFileCreationStepDef {
 
@@ -23,33 +25,39 @@ public class PhysicalFileCreationStepDef {
     }
 
     @And("^file header for logical file (\\d+)$")
-    public void fileHeaderForLogicalFile(int logicalFileNumber, List<FileHeader> fileHeaderList) {
-        nachaModelBuilder.setupFileHeader(logicalFileNumber, fileHeaderList);
+    public void fileHeaderForLogicalFile(int logicalFileNumber, DataTable dataTable) {
+        List<Map<String,String>> fileHeaderMapList=dataTable.asMaps(String.class,String.class);
+        nachaModelBuilder.setupFileHeader(logicalFileNumber, fileHeaderMapList);
     }
 
     @And("^(\\d+) batch header for logical file (\\d+)$")
-    public void batchHeaderForLogicalFile(int batchNumberSize, int logicalFileNumber, List<BatchHeader> batchHeaderList) {
-        nachaModelBuilder.setupBatchHeader(batchNumberSize, logicalFileNumber, batchHeaderList);
+    public void batchHeaderForLogicalFile(int batchNumberSize, int logicalFileNumber,DataTable dataTable) {
+        List<Map<String,String>> batchHeaderMapList=dataTable.asMaps(String.class,String.class);
+        nachaModelBuilder.setupBatchHeader(batchNumberSize, logicalFileNumber, batchHeaderMapList);
     }
 
     @And("^(\\d+) entry record for batch (\\d+) in logical file (\\d+)$")
-    public void entryRecordForLogicalFile(int instructionSize, int batchNumber, int logicalFileNumber, List<EntryRecord> entryRecordList) {
-        nachaModelBuilder.setupEntryRecord(instructionSize, batchNumber, logicalFileNumber, entryRecordList);
+    public void entryRecordForLogicalFile(int instructionSize, int batchNumber, int logicalFileNumber, DataTable dataTable) {
+        List<Map<String,String>> entryRecordMapList=dataTable.asMaps(String.class,String.class);
+        nachaModelBuilder.setupEntryRecord(instructionSize, batchNumber, logicalFileNumber, entryRecordMapList);
     }
 
     @And("^additional record for batch (\\d+) in logical file (\\d+)$")
-    public void additionalRecordForBatchInLogicalFile(int batchNumber, int logicalFileNumber, List<AdditionalRecord> additionalRecordList) {
-        nachaModelBuilder.setupAdditionalRecord(batchNumber, logicalFileNumber, additionalRecordList);
+    public void additionalRecordForBatchInLogicalFile(int batchNumber, int logicalFileNumber,  DataTable dataTable) {
+        List<Map<String,String>> additionalRecordMapList=dataTable.asMaps(String.class,String.class);
+        nachaModelBuilder.setupAdditionalRecord(batchNumber, logicalFileNumber, additionalRecordMapList);
     }
 
     @And("^batch control for logical file (\\d+)$")
-    public void batchControlForLogicalFile(int logicalFileNumber, List<BatchControl> batchControlList) {
-        nachaModelBuilder.setupBatchControl(logicalFileNumber, batchControlList);
+    public void batchControlForLogicalFile(int logicalFileNumber, DataTable dataTable) {
+        List<Map<String,String>> batchControlMapList=dataTable.asMaps(String.class,String.class);
+        nachaModelBuilder.setupBatchControl(logicalFileNumber, batchControlMapList);
     }
 
     @And("^file control for logical file (\\d+)$")
-    public void fileControlForLogicalFile(int logicalFileNumber, List<FileControl> fileControlList) {
-        nachaModelBuilder.setupFileControl(logicalFileNumber, fileControlList);
+    public void fileControlForLogicalFile(int logicalFileNumber, DataTable dataTable) {
+        List<Map<String,String>> fileControlMapList=dataTable.asMaps(String.class,String.class);
+        nachaModelBuilder.setupFileControl(logicalFileNumber, fileControlMapList);
     }
 
 

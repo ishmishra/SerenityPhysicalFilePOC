@@ -2,8 +2,12 @@ package model;
 
 public class FileControl {
 
-    private String recordType="9";
-    private String sessionType="2";
+    {
+        this.sessionType = "4";
+    }
+
+    private String recordType = "9";
+    private String sessionType = "2";
 
     public String getRecordType() {
         return recordType;

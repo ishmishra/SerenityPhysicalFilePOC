@@ -4,7 +4,7 @@ Feature: Test file creation
     Given 2 logical files for physical file "FileName"
     And file header for logical file 1
       | recordType | SessionType |
-      | 1          |             |
+      |            |             |
     And 2 batch header for logical file 1
       | recordType | batchNumber |
       | 5          |             |
